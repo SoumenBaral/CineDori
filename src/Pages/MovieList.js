@@ -2,9 +2,9 @@ import React from 'react';
 
 const MovieList = () => {
     return (
-        <div>
+        <main>
             <h1>Movies</h1>
-        </div>
+        </main>
     );
 };
 
