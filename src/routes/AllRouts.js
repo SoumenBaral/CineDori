@@ -13,7 +13,7 @@ const AllRouts = () => {
                 <Route path='movie/:id' element={<MovieDetails/>} />
                 <Route path='movies/popular' element={<MovieList/>}/>
                 <Route path='movies/top' element={<MovieList/>}/>
-                <Route path='movies/upcoming ' element={<MovieList/>}/>
+                <Route path='movies/upcoming' element={<MovieList/>}/>
                 <Route path='*' element ={<PageNotFound />} />
                 <Route path='search' element={<Search />} />
 
