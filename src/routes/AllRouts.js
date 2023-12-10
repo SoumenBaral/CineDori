@@ -7,7 +7,7 @@ import Search from '../Pages/Search';
 
 const AllRouts = () => {
     return (
-        <div className='dark:bg-slate-900'>
+        <div className='dark:bg-slate-800'>
             <Routes>
                 <Route path='/' element={<MovieList/>}/>
                 <Route path='movie/:id' element={<MovieDetails/>} />
