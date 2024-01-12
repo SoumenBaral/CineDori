@@ -5,7 +5,6 @@ import Bakup from "../assets/logo.png";
 
 
 const Cart = ({movie}) => {
-    console.log(movie);
    
     const {original_title,overview,id,poster_path} = movie
     const img =poster_path? `https://image.tmdb.org/t/p/w500/${poster_path}`:Bakup

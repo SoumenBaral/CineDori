@@ -2,9 +2,10 @@ import Cart from '../components/Cart';
 import useFetch from '../hooks/useFetch';
 
 
-const MovieList = () => {
+const MovieList = ({apiPath}) => {
 
- const {data:movies} = useFetch('https://api.themoviedb.org/3/movie/now_playing?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
+ const {data:movies} = useFetch(`https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.REACT_APP_API_KEY}`)
+ console.log(apiPath);
     return (
         <main>
            <section className='max-w-7xl mx-auto py-4'>
@@ -15,9 +16,6 @@ const MovieList = () => {
                     ))
                 }
                 
-                
-                
-
             </div>
 
            </section>

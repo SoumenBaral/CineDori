@@ -11,7 +11,7 @@ const useFetch = (url) => {
             setData(json.results)
         }
         fetchMovies()
-    },[])
+    },[url])
     return {data}
 };
 
