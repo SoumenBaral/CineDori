@@ -55,7 +55,7 @@ const MovieDetails = () => {
                 <p className='my-3'><span className='mr-2 font-bold'>Revenue : </span> ${movie?.revenue} </p>
                 <p className='my-3'><span className='mr-2 font-bold'>Release Date : </span> {movie?.release_date} </p>
                 <p className='my-3'><span className='mr-2 font-bold'>Imdb Code : </span> {movie?.imdb_id} </p>
-                <Button className='my-2'><a href={`https://www.imdb.com/title/${movie?.imdb_id}`} target="_blank">get it</a></Button>
+                <Button className='my-2'><a href={`https://www.imdb.com/title/${movie?.imdb_id}`} target="_blank" rel="noreferrer" >get it</a></Button>
 
                 
             </div>
