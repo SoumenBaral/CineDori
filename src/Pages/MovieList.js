@@ -1,11 +1,16 @@
+import { useEffect } from 'react';
 import Cart from '../components/Cart';
 import useFetch from '../hooks/useFetch';
+import useTitle from '../hooks/useTitle';
 
 
-const MovieList = ({apiPath}) => {
+const MovieList = ({apiPath,title}) => {
 
  const {data:movies} = useFetch(`https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.REACT_APP_API_KEY}`)
- console.log(apiPath);
+//  console.log(apiPath);
+
+const PageTitle = useTitle(title)
+
     return (
         <main>
            <section className='max-w-7xl mx-auto py-4'>

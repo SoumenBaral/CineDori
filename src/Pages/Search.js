@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useSearchParams} from 'react-router-dom'
 import Cart from '../components/Cart';
 import useFetch from '../hooks/useFetch';
+import useTitle from '../hooks/useTitle';
 
 const Search = ({apiPath}) => {
     const[searchParams] =useSearchParams()
     const queryTerm = searchParams.get('q')
     const {data:movies} = useFetch(`https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.REACT_APP_API_KEY}&query=${queryTerm}`)
+   
+    // useEffect(()=>{
+    //     document.title =`Search Result for ${queryTerm}/cineDore`
+    // },[queryTerm])
+    useTitle(`Search Result for ${queryTerm}`)
     return (
         <main>
             <section>

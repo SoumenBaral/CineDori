@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import pages from '../assets/page.jpg';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 const PageNotFound = () => {
+
+    useEffect(()=>{
+        document.title = 'page Not fund /cineDore'
+    },[])
     return (
         <main>
             <section className='flex flex-col justify-center px-2'>
