@@ -9,7 +9,7 @@ const MovieList = ({apiPath,title}) => {
  const {data:movies} = useFetch(`https://api.themoviedb.org/3/${apiPath}?api_key=${process.env.REACT_APP_API_KEY}`)
 //  console.log(apiPath);
 
-const PageTitle = useTitle(title)
+useTitle(title)
 
     return (
         <main>
